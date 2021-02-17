@@ -1,0 +1,32 @@
+---- Minecraft Crash Report ----
+// I blame Dinnerbone.
+
+Time: 20/01/2021, 16:33
+Description: Exception in server tick loop
+
+java.lang.NullPointerException: Exception in server tick loop
+	at acy.f(SourceFile:121)
+	at zf.y(SourceFile:95)
+	at zf.<init>(SourceFile:22)
+	at zg.d(SourceFile:169)
+	at net.minecraft.server.MinecraftServer.w(SourceFile:645)
+	at net.minecraft.server.MinecraftServer.a(SourceFile:257)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- System Details --
+Details:
+	Minecraft Version: 1.16.5
+	Minecraft Version ID: 1.16.5
+	Operating System: Linux (amd64) version 5.4.0-62-generic
+	Java Version: 11.0.9.1, Ubuntu
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode, sharing), Ubuntu
+	Memory: 3017594880 bytes (2877 MB) / 3221225472 bytes (3072 MB) up to 3221225472 bytes (3072 MB)
+	CPUs: 2
+	JVM Flags: 2 total; -Xmx3072M -Xms3072M
+	Data Packs: vanilla
+	Is Modded: Unknown (can't tell)
+	Type: Dedicated Server (map_server.txt)

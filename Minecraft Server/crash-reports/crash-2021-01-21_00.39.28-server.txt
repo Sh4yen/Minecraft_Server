@@ -1,0 +1,95 @@
+---- Minecraft Crash Report ----
+// This is a token for 1 free hug. Redeem at your nearest Mojangsta: [~~HUG~~]
+
+Time: 21/01/2021, 00:39
+Description: Ticking entity
+
+java.lang.IllegalArgumentException: bound must be positive
+	at java.base/java.util.Random.nextInt(Random.java:388)
+	at buk.b(SourceFile:106)
+	at buk.a(SourceFile:91)
+	at aai.a(SourceFile:268)
+	at aai.a(SourceFile:103)
+	at aah.j(SourceFile:379)
+	at aqa.ba(SourceFile:1758)
+	at aqm.ba(SourceFile:2668)
+	at bfw.ba(SourceFile:522)
+	at aag.a(SourceFile:652)
+	at aag.a(SourceFile:629)
+	at brx.a(SourceFile:561)
+	at aag.a(SourceFile:411)
+	at net.minecraft.server.MinecraftServer.b(SourceFile:871)
+	at zg.b(SourceFile:312)
+	at net.minecraft.server.MinecraftServer.a(SourceFile:811)
+	at net.minecraft.server.MinecraftServer.w(SourceFile:670)
+	at net.minecraft.server.MinecraftServer.a(SourceFile:257)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Server thread
+Stacktrace:
+	at java.base/java.util.Random.nextInt(Random.java:388)
+	at buk.b(SourceFile:106)
+	at buk.a(SourceFile:91)
+	at aai.a(SourceFile:268)
+	at aai.a(SourceFile:103)
+	at aah.j(SourceFile:379)
+	at aqa.ba(SourceFile:1758)
+	at aqm.ba(SourceFile:2668)
+	at bfw.ba(SourceFile:522)
+	at aag.a(SourceFile:652)
+	at aag.a(SourceFile:629)
+
+-- Entity being ticked --
+Details:
+	Entity Type: minecraft:skeleton_horse (bbh)
+	Entity ID: 2096
+	Entity Name: Skeleton Horse
+	Entity's Exact location: -1692.54, 70.00, 748.02
+	Entity's Block location: World: (-1693,70,748), Chunk: (at 3,4,12 in -106,46; contains blocks -1696,0,736 to -1681,255,751), Region: (-4,1; contains chunks -128,32 to -97,63, blocks -2048,0,512 to -1537,255,1023)
+	Entity's Momentum: 0.00, 0.00, 0.00
+	Entity's Passengers: [aah['Nobodysun'/8118, l='ServerLevel[world]', x=-1692.14, y=71.21, z=747.34]]
+	Entity's Vehicle: ~~ERROR~~ NullPointerException: null
+Stacktrace:
+	at brx.a(SourceFile:561)
+	at aag.a(SourceFile:411)
+
+-- Affected level --
+Details:
+	All players: 6 total; [aah['Shepard_L'/714, l='ServerLevel[world]', x=7.30, y=21.00, z=7.12], aah['Cl4ssi_x'/3470, l='ServerLevel[world]', x=17.49, y=71.00, z=94.29], aah['P4rcev4l'/3817, l='ServerLevel[world]', x=261.70, y=14.00, z=-83.30], aah['Nobodysun'/8118, l='ServerLevel[world]', x=-1692.14, y=71.21, z=747.34], aah['LoisLane'/11089, l='ServerLevel[world]', x=-43.82, y=69.00, z=80.29], aah['Duckelson'/11596, l='ServerLevel[world]', x=-105.49, y=68.00, z=149.58]]
+	Chunk stats: ServerChunkCache: 4996
+	Level dimension: minecraft:overworld
+	Level spawn location: World: (0,71,80), Chunk: (at 0,4,0 in 0,5; contains blocks 0,0,80 to 15,255,95), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,0,0 to 511,255,511)
+	Level time: 6485952 game time, 7205123 day time
+	Level name: world
+	Level game mode: Game mode: survival (ID 0). Hardcore: false. Cheats: false
+	Level weather: Rain time: 39147 (now: false), thunder time: 41542 (now: false)
+	Known server brands: vanilla
+	Level was modded: false
+	Level storage version: 0x04ABD - Anvil
+Stacktrace:
+	at net.minecraft.server.MinecraftServer.b(SourceFile:871)
+	at zg.b(SourceFile:312)
+	at net.minecraft.server.MinecraftServer.a(SourceFile:811)
+	at net.minecraft.server.MinecraftServer.w(SourceFile:670)
+	at net.minecraft.server.MinecraftServer.a(SourceFile:257)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.16.5
+	Minecraft Version ID: 1.16.5
+	Operating System: Linux (amd64) version 5.4.0-62-generic
+	Java Version: 11.0.9.1, Ubuntu
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode, sharing), Ubuntu
+	Memory: 481255936 bytes (458 MB) / 2147483648 bytes (2048 MB) up to 2147483648 bytes (2048 MB)
+	CPUs: 2
+	JVM Flags: 2 total; -Xmx2048M -Xms2048M
+	Player Count: 6 / 20; [aah['Shepard_L'/714, l='ServerLevel[world]', x=7.30, y=21.00, z=7.12], aah['Cl4ssi_x'/3470, l='ServerLevel[world]', x=17.49, y=71.00, z=94.29], aah['P4rcev4l'/3817, l='ServerLevel[world]', x=261.70, y=14.00, z=-83.30], aah['Nobodysun'/8118, l='ServerLevel[world]', x=-1692.14, y=71.21, z=747.34], aah['LoisLane'/11089, l='ServerLevel[world]', x=-43.82, y=69.00, z=80.29], aah['Duckelson'/11596, l='ServerLevel[world]', x=-105.49, y=68.00, z=149.58]]
+	Data Packs: vanilla
+	Is Modded: Unknown (can't tell)
+	Type: Dedicated Server (map_server.txt)
